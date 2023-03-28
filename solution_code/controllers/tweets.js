@@ -1,9 +1,16 @@
 const express = require('express');
 const router = express.Router();
+// import the Tweet module
+const Tweet = require("../models/tweet")
 
-// Create
+
+
+// async or await(async:manege promises)
+
+// Create 
 router.post('/', async (req, res) => {
-	res.send('tweet post route');
+	console.log("req.body",req.body)
+	res.send(req.body);
 });
 
 // Index
